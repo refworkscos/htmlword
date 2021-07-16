@@ -93,6 +93,7 @@
   <xsl:template match="body/h1|body/h2|body/h3|body/h4|body/h5|body/h6|h1|h2|h3|h4|h5|h6">
     <xsl:variable name="length" select="string-length(name(.))"/>
     <w:p>
+      <xsl:call-template name="text-alignment" />
       <w:pPr>
         <w:pStyle w:val="Heading{substring(name(.),$length)}"/>
       </w:pPr>
