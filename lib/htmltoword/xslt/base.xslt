@@ -66,12 +66,16 @@
   </xsl:template>
 
   <xsl:template match="br">
-    <w:r>
-      <w:br />
-    </w:r>
+    <xsl:if test="not(preceding-sibling::node()
+                           [not(self::text() and normalize-space(.) = '')][1]
+                           [self::br])">
+     <w:r>
+       <w:br />
+     </w:r>
+    </xsl:if>
   </xsl:template>
   
-  <xsl:template match='br[(preceding-sibling::*)[1][self::br]]'/>
+  <!--<xsl:template match='br[(preceding-sibling::*)[1][self::br]]'/>-->
   
   <xsl:template match="pre">
     <w:p>
