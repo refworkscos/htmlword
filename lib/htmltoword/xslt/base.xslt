@@ -61,19 +61,14 @@
   </xsl:template>
 
   <xsl:template match="br[(ancestor::li or ancestor::td) and
-                          (preceding-sibling::div or following-sibling::div or preceding-sibling::p or following-sibling::p) and
-                          (not(preceding-sibling::node()
-                                                     [not(self::text() and normalize-space(.) = '')][1]
-                                                     [self::br]))]">
+                         (preceding-sibling::div or following-sibling::div or preceding-sibling::p or following-sibling::p)]">
     <w:r>
       <w:br />
     </w:r>
   </xsl:template>
 
   <xsl:template match="br">
-    <xsl:if test="not(preceding-sibling::node()
-                           [not(self::text() and normalize-space(.) = '')][1]
-                           [self::br])">
+    <xsl:if test="not(preceding-sibling::node()[self::br])">
      <w:r>
        <w:br />
      </w:r>
