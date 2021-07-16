@@ -51,6 +51,8 @@
   </xsl:template>
 
 
+  <xsl:template match="br[(preceding-sibling::*)[1][self::br]]"/>
+  
   <xsl:template match="br[not(ancestor::p) and not(ancestor::div) and not(ancestor::td|ancestor::li) or
                           (preceding-sibling::div or following-sibling::div or preceding-sibling::p or following-sibling::p)]">
     <w:p>
@@ -78,7 +80,6 @@
     </xsl:if>
   </xsl:template>
   
-  <!--<xsl:template match='br[(preceding-sibling::*)[1][self::br]]'/>-->
   
   <xsl:template match="pre">
     <w:p>
