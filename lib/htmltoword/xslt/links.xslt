@@ -26,6 +26,9 @@
           <w:rStyle w:val="Hyperlink"/>
           <w:color w:val="000080"/>
           <w:u w:val="single"/>
+          <xsl:if test="contains(@class, 'h2')">
+            <w:sz w:val="22"/>
+          </xsl:if>
         </w:rPr>
         <w:t xml:space="preserve"><xsl:value-of select="."/></w:t>
       </w:r>

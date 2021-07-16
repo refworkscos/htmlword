@@ -6,7 +6,10 @@ module Htmltoword
     end
 
     def xslt_path(template_name)
-      File.join(Htmltoword.config.default_xslt_path, "#{template_name}.xslt")
+      #File.join(Htmltoword.config.default_xslt_path, "#{template_name}.xslt")
+      default_path = File.join(Htmltoword.config.default_xslt_path, "#{template_name}.xslt")
+      custom_path  = File.join(Htmltoword.config.custom_xslt_path, "#{template_name}.xslt")
+      File.exist?(custom_path) ? custom_path : default_path
     end
 
     def xslt(stylesheet_name: nil, stylesheet_path: nil)
