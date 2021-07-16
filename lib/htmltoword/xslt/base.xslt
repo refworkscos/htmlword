@@ -70,7 +70,9 @@
       <w:br />
     </w:r>
   </xsl:template>
-
+  
+  <xsl:template match='br[(preceding-sibling::*)[1][self::br]]'/>
+  
   <xsl:template match="pre">
     <w:p>
       <xsl:apply-templates />
