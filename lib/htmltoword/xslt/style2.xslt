@@ -25,12 +25,16 @@
 
   <xsl:template match="body">
     <w:body>
+      <w:docPr>
+        <w:view  w:val="normal"/>
+        <w:zoom w:val="full-page" w:percent="100"/>
+      </w:docPr>
       <w:p>
         <xsl:apply-templates/>
       </w:p>
       <w:sectPr>
         <w:pgSz w:w="11906" w:h="16838"/>
-        <w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="708" w:footer="708" w:gutter="0"/>
+        <w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="708" w:footer="720" w:gutter="0"/>
         <w:cols w:space="708"/>
         <w:docGrid w:linePitch="360"/>
       </w:sectPr>
@@ -44,9 +48,7 @@
               <w:t>Source: Pivot-RP. Copyright &#xA9; 2021, ProQuest LLC. All rights reserved.</w:t>
             </w:r>
           </w:p>
-       </w:ftr>
-       <w:titlePg/>
-       <w:footer/>
+        </w:ftr>
       </w:sectPr>
     </w:body>
   </xsl:template>
@@ -58,12 +60,6 @@
         <w:t xml:space="preserve"><xsl:value-of select="."/></w:t>
       </w:r>
     <w:br/>
-  </xsl:template>
-  
-  <xsl:template match="footer">
-    <p>
-      <xsl:value-of select="."/>
-    </p>
   </xsl:template>
 
 </xsl:stylesheet>
