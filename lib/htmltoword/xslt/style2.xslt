@@ -33,6 +33,7 @@
         <w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="708" w:footer="720" w:gutter="0"/>
         <w:cols w:space="708"/>
         <w:docGrid w:linePitch="360"/>
+      </w:sectPr>
         <w:ftr w:type="odd">
           <w:p>
             <w:pPr>
@@ -43,6 +44,7 @@
             </w:r>
           </w:p>
         </w:ftr>
+      <w:sectPr>
       </w:sectPr>
     </w:body>
   </xsl:template>
