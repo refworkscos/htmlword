@@ -29,7 +29,7 @@
         <xsl:if test="not(contains(concat(' ', @class, ' '), ' table-condensed '))">
           <w:tblCellMar>
             <w:top w:w="108" w:type="dxa"/>
-            <!--<w:bottom w:w="108" w:type="dxa"/>-->
+            <w:bottom w:w="108" w:type="dxa"/>
           </w:tblCellMar>
         </xsl:if>
       </w:tblPr>
