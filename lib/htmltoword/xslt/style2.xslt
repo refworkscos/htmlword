@@ -34,7 +34,6 @@
         <w:cols w:space="708"/>
         <w:docGrid w:linePitch="360"/>
       </w:sectPr>
-      <!--
       <w:sectPr>
         <w:ftr w:type="odd">
           <w:p>
@@ -47,7 +46,6 @@
           </w:p>
         </w:ftr>
       </w:sectPr>
-     -->
     </w:body>
   </xsl:template>
 
