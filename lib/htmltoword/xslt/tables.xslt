@@ -26,10 +26,19 @@
         <w:tblW w:w="5000" w:type="pct"/>
         <xsl:call-template name="tableborders"/>
         <w:tblLook w:val="0600" w:firstRow="0" w:lastRow="0" w:firstColumn="0" w:lastColumn="0" w:noHBand="1" w:noVBand="1"/>
-        <w:tblCellMar>
-          <w:top w:w="108" w:type="dxa"/>
-          <!--<w:bottom w:w="108" w:type="dxa"/>-->
-        </w:tblCellMar>
+        <xsl:choose>
+          <xsl:when test="contains(@class, 'table-condensed')">
+            <w:tblCellMar>
+              <w:top w:w="108" w:type="dxa"/>
+              <!--<w:bottom w:w="108" w:type="dxa"/>-->
+            </w:tblCellMar>
+          <xsl:otherwise>
+            <w:tblCellMar>
+              <w:top w:w="108" w:type="dxa"/>
+              <!--<w:bottom w:w="108" w:type="dxa"/>-->
+            </w:tblCellMar>
+          </xsl:otherwise>
+        </xsl:choose>
       </w:tblPr>
       <xsl:apply-templates />
     </w:tbl>
