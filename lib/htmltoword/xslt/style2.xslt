@@ -46,7 +46,8 @@
           </w:p>
        </w:ftr>
        <w:titlePg/>
-      <w:sectPr>
+       <w:footer/>
+      </w:sectPr>
     </w:body>
   </xsl:template>
 
@@ -57,6 +58,12 @@
         <w:t xml:space="preserve"><xsl:value-of select="."/></w:t>
       </w:r>
     <w:br/>
+  </xsl:template>
+  
+  <xsl:template match="footer">
+    <p>
+      <xsl:value-of select="."/>
+    </p>
   </xsl:template>
 
 </xsl:stylesheet>
