@@ -39,7 +39,7 @@
               <w:pStyle w:val="Footer"/>
             </w:pPr>
             <w:r>
-              <w:t>Source: Pivot-RP. Copyright &#xA9; 2021, ProQuest LLC. All rights reserved.</w:t>
+              <w:t>Source: Pivot-RP. Copyright 2021, ProQuest LLC. All rights reserved.</w:t>
             </w:r>
           </w:p>
         </w:ftr>
