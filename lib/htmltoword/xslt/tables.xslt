@@ -32,6 +32,7 @@
           <w:bottom w:w="108" w:type="dxa"/>
         </w:tblCellMar>
           -->
+        <w:tblCellSpacing w:w="108" w:type="dxa"/>
       </w:tblPr>
       <xsl:apply-templates />
     </w:tbl>
