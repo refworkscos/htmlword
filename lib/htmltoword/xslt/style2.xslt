@@ -34,6 +34,7 @@
         <w:cols w:space="708"/>
         <w:docGrid w:linePitch="360"/>
       </w:sectPr>
+      <!--
       <w:sectPr>
         <w:ftr w:type="odd">
           <w:p>
@@ -41,11 +42,12 @@
               <w:pStyle w:val="Footer"/>
             </w:pPr>
             <w:r>
-              <w:t>Source: Pivot-RP. Copyright 2021, ProQuest LLC. All rights reserved.</w:t>
+              <w:t>Source: Pivot-RP. Copyright &#xA9; 2021, ProQuest LLC. All rights reserved.</w:t>
             </w:r>
           </w:p>
         </w:ftr>
       </w:sectPr>
+     -->
     </w:body>
   </xsl:template>
 
