@@ -25,10 +25,6 @@
 
   <xsl:template match="body">
     <w:body>
-      <w:docPr>
-        <w:view  w:val="normal"/>
-        <w:zoom w:val="full-page" w:percent="100"/>
-      </w:docPr>
       <w:p>
         <xsl:apply-templates/>
       </w:p>
@@ -37,8 +33,6 @@
         <w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="708" w:footer="720" w:gutter="0"/>
         <w:cols w:space="708"/>
         <w:docGrid w:linePitch="360"/>
-      </w:sectPr>
-      <w:sectPr>
         <w:ftr w:type="odd">
           <w:p>
             <w:pPr>
